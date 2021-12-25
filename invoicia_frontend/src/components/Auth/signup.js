@@ -1,5 +1,5 @@
 import useInput from "./../../hooks/user-input";
-// import "./SigninForm.css";
+ import "./auth_styles.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.includes("@");
