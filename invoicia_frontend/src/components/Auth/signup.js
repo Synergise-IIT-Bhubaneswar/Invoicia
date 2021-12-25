@@ -1,11 +1,11 @@
 import useInput from "./../../hooks/user-input";
-import "./SigninForm.css";
+// import "./SigninForm.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.includes("@");
 const isPassword = (value) => value.trim().length > 8 && !value.includes(" ");
 
-const BasicForm = (props) => {
+const SignupForm = (props) => {
   const {
     value: firstNameValue,
     isValid: firstNameIsValid,
@@ -139,4 +139,4 @@ const BasicForm = (props) => {
   );
 };
 
-export default BasicForm;
+export default SignupForm;
