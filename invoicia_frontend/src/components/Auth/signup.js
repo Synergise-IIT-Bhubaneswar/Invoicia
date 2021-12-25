@@ -106,7 +106,7 @@ const SignupForm = (props) => {
         <div className={passwordClasses}>
           <label htmlFor="name">Password</label>
           <input
-            type="text"
+            type="password"
             id="name"
             value={passwordValue}
             onChange={passwordChangeHandler}
