@@ -1,5 +1,8 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { Link, Prompt, useHistory } from "react-router-dom";
+
+
+import AuthContext from "../../contexts/authContext";
 import useInput from "./../../hooks/user-input";
 import "./auth_styles.css";
 
@@ -8,6 +11,8 @@ const isPassword = (value) => value.trim().length > 8 && !value.includes(" ");
 
 const LoginForm = (props) => {
   const history = useHistory();
+
+  const AuthCtx = useContext(AuthContext);
   const {
     value: emailValue,
     isValid: emailIsValid,
@@ -32,7 +37,7 @@ const LoginForm = (props) => {
   if (emailIsValid && passwordIsValid) {
     formIsValid = true;
   }
-  let formIsTouched = passwordIsTouched|| emailIsTouched || false;
+  let formIsTouched = passwordIsTouched || emailIsTouched || false;
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -42,7 +47,7 @@ const LoginForm = (props) => {
     if (!formIsValid) {
       return;
     }
-
+    AuthCtx.onLogin();
     resetEmail();
     resetPassword();
   };
