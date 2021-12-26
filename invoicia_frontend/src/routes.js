@@ -5,7 +5,7 @@ import './App.css';
 //add or uncomment that perticular components from following as you configure any of compontent
 
 import Header from './components/Header/header';
-// import Footer from './components/Footer/footer';
+import Footer from './components/Footer/footer';
 
 // import Login from './components/Auth/login';
 // import Signup from './components/Auth/signup';
@@ -24,7 +24,7 @@ class Routers extends Component {
             <Header/>     
             </BrowserRouter>
             </div>
-            {/* <Footer/> */}
+            <Footer/>
         </div>
       );
   
