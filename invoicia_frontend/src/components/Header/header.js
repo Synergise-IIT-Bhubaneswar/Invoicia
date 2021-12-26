@@ -20,8 +20,8 @@ const navItems = [
     url: "/Login",
   },
   {
-    title: "Signin",
-    url: "/signin",
+    title: "Signup",
+    url: "/signup",
   },
 ];
 
