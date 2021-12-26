@@ -12,7 +12,7 @@ import SignupForm from './components/Auth/signup';
 import Footer from './components/Footer/footer';
 
 
-// import Login from './components/Auth/login';
+import LoginForm from './components/Auth/login';
 // import Signup from './components/Auth/signup';
 // import ForgotPswd from './components/Auth/forget_password';
 
@@ -27,10 +27,11 @@ class Routers extends Component {
           <div className="wrap">
             <BrowserRouter>
             <Header/>     
-            <Route path='/signin'><SignupForm/></Route>
+            <Route path='/signup'><SignupForm/></Route>
+            <Route path='/login'><LoginForm/></Route>
+            <Footer/>
             </BrowserRouter>
             </div>
-            <Footer/>
         </div>
       );
   

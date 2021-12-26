@@ -1,19 +1,33 @@
-import React, { Component } from 'react';
+import React, { useState } from "react";
 
-export const authContext=React.createContext();
+const AuthContext = React.createContext({
+  isLoggedIn: false,
+  onLogout: () => {},
+  onLogin: () => {},
+});
 
-class AuthContextProvider extends Component {
-    state= {
+export const AuthContextProvider = (props) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    }
+  const logoutHandler = () => {
+    setIsLoggedIn(false);
+  };
 
-    render() {
-        return (
-            <authContext.Provider value={{...this.state/**add other props */}}>
-                {this.props.children}
-            </authContext.Provider>
-        );
-    }
-}
+  const loginHandler = () => {
+    setIsLoggedIn(true);
+  };
 
-export default AuthContextProvider;
+  return (
+    <AuthContext.Provider
+      value={{
+        isLoggedIn: isLoggedIn,
+        onLogout: logoutHandler,
+        onLogin: loginHandler,
+      }}
+    >
+      {props.children}
+    </AuthContext.Provider>
+  );
+};
+
+export default AuthContext;

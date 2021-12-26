@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
+import AuthContext from "../../contexts/authContext";
 import "./header.css";
 
 const navItems = [
@@ -23,12 +24,23 @@ const navItems = [
     title: "Signup",
     url: "/signup",
   },
+  {
+    title: "Logout",
+    url: "/",
+  },
 ];
 
 const Header = () => {
   const [click, setClick] = useState(false);
 
-  const handleClick = () => setClick(!click);
+  const authCtx = useContext(AuthContext);
+  const handleClick = (event) => {
+    if (event.target.innerHTML === "Logout");
+    authCtx.onLogout();
+    return setClick(!click);
+  };
+
+  const { isLoggedIn } = authCtx;
 
   return (
     <>
@@ -40,7 +52,35 @@ const Header = () => {
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             {navItems.map((item, index) => {
-              return (
+              return item.title === "Profile" || item.title === "Logout" ? (
+                isLoggedIn && (
+                  <li key={index} className="nav-item">
+                    <NavLink
+                      exact
+                      to={item.url}
+                      activeClassName="active"
+                      className="nav-links"
+                      onClick={handleClick}
+                    >
+                      {item.title}
+                    </NavLink>
+                  </li>
+                )
+              ) : item.title === "Signup" || item.title === "Login" ? (
+                !isLoggedIn && (
+                  <li key={index} className="nav-item">
+                    <NavLink
+                      exact
+                      to={item.url}
+                      activeClassName="active"
+                      className="nav-links"
+                      onClick={handleClick}
+                    >
+                      {item.title}
+                    </NavLink>
+                  </li>
+                )
+              ) : (
                 <li key={index} className="nav-item">
                   <NavLink
                     exact
