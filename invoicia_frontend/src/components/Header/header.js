@@ -35,11 +35,10 @@ const Header = () => {
 
   const authCtx = useContext(AuthContext);
   const handleClick = (event) => {
-   if(event.target.innerHTML==='Logout');
+    if (event.target.innerHTML === "Logout");
     authCtx.onLogout();
     return setClick(!click);
   };
-
 
   const { isLoggedIn } = authCtx;
 
