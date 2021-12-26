@@ -1,0 +1,55 @@
+body {
+    background-color: white;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    max-width: 55rem;
+    margin: 2rem auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 25rem 25rem;
+    padding: 2rem;
+    grid-gap: 4rem;
+  }
+  .card img {
+    width: 100%;
+    margin-bottom: -2rem;
+  }
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  .user-name {
+    margin: 3rem 0rem -0.4rem 0rem;
+    padding-right: 4rem;
+  }
+  .user-prof{
+  margin-bottom: 2rem;
+  padding-right: 4rem;
+  color: blue;
+  }
+  .details {
+    display: grid;
+    grid-template-columns: 6rem 14rem;
+    grid-gap: 4rem;
+  }
+  .details h4{
+      text-align: left;
+  }
+  .description {
+    text-align: center;
+    padding: 0rem 1rem;
+    margin-top: 4rem;
+  }
+  .card a {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(74, 24, 255);
+    margin: 0.5rem;
+  }
+  .details-value{
+      text-align: left;
+      padding: 0.15rem;
+      color: blue;
+  }
+  
