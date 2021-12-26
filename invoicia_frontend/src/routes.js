@@ -5,7 +5,12 @@ import './App.css';
 //add or uncomment that perticular components from following as you configure any of compontent
 
 import Header from './components/Header/header';
+
+import SignupForm from './components/Auth/signup';
+// import Footer from './components/Footer/footer';
+
 import Footer from './components/Footer/footer';
+
 
 // import Login from './components/Auth/login';
 // import Signup from './components/Auth/signup';
@@ -22,6 +27,7 @@ class Routers extends Component {
           <div className="wrap">
             <BrowserRouter>
             <Header/>     
+            <Route path='/signin'><SignupForm/></Route>
             </BrowserRouter>
             </div>
             <Footer/>

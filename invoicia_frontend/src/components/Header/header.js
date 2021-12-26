@@ -15,6 +15,14 @@ const navItems = [
     title: "Profile",
     url: "/profile",
   },
+  {
+    title: "Login",
+    url: "/Login",
+  },
+  {
+    title: "Signup",
+    url: "/signup",
+  },
 ];
 
 const Header = () => {
