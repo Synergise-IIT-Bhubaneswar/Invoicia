@@ -18,7 +18,7 @@ body {
     border-radius: 1.4rem;
     width: 90%;
     padding: 42px 42px 30px;
-    box-shadow: 0 2px 8px rgb(243 255 255);
+    box-shadow: 0 2px 8px rgb(153, 150, 150);
   }
   
   .form-control input,
@@ -107,4 +107,11 @@ body {
   
   .error-text {
     color: #b40e0e;
+  }
+  .text-center{
+    text-align: center;
+    margin-right: 5rem;
+  }
+  .text-center a{
+    color: rgb(180, 127, 29);
   }

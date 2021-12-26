@@ -27,10 +27,10 @@ class Routers extends Component {
           <div className="wrap">
             <BrowserRouter>
             <Header/>     
-            <Route path='/signin'><SignupForm/></Route>
+            <Route path='/signup'><SignupForm/></Route>
+            <Footer/>
             </BrowserRouter>
             </div>
-            <Footer/>
         </div>
       );
   
