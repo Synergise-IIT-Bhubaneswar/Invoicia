@@ -16,7 +16,7 @@ import LoginForm from './components/Auth/login';
 // import Signup from './components/Auth/signup';
 // import ForgotPswd from './components/Auth/forget_password';
 
-// import Profile from './components/User/profile';
+import Profile from './components/User/profile';
 // import Edit from './components/User/edit_profile';
 
 class Routers extends Component {
@@ -29,6 +29,7 @@ class Routers extends Component {
             <Header/>     
             <Route path='/signup'><SignupForm/></Route>
             <Route path='/login'><LoginForm/></Route>
+            <Route path='/profile'><Profile/></Route>
             <Footer/>
             </BrowserRouter>
             </div>
