@@ -58,7 +58,7 @@ body {
     flex: 1;
   }
   
-   button {
+  form button {
     font: inherit;
     color: teal;
     border: 1px solid teal;
@@ -69,18 +69,18 @@ body {
     width: 40%;
   }
   
-   button:hover {
+  form button:hover {
     background-color: #c2fafa;
   }
   
-  button:hover,
-  button:active {
+  form button:hover,
+  form button:active {
     background-color: #c2fafa;
   }
   
-  button:disabled,
-  button:disabled:hover,
-  button:disabled:active {
+  form button:disabled,
+  form button:disabled:hover,
+  form button:disabled:active {
     background-color: #ccc;
     color: #292929;
     border-color: #ccc;

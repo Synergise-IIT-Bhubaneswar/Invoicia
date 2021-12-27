@@ -47,9 +47,11 @@ const Profile = () => {
               <p className="details-value">897 657 4657</p>
             </div>
           </div>
+      <p><button className="edit-profile">Edit Profile</button></p>
         </div>
       </div>
     </Fragment>
+    
   );
 };
 
