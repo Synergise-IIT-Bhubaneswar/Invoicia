@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const usercontroller = require('../controllers/usercontroller');
 
-router.get('/getUser/:userId',usercontroller.getOneUser);
+router.get('/:userId/getUser',usercontroller.getOneUser);
 router.get('/allUsers',usercontroller.getAllUser);
-router.patch('/editPorfile/:userId',usercontroller.updateUserInfo);
+router.patch('/:userId/editPorfile',usercontroller.updateUserInfo);
 
 module.exports=router;
 
