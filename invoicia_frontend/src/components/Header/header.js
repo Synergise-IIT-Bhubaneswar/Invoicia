@@ -80,6 +80,26 @@ const Header = () => {
                     </NavLink>
                   </li>
                 )
+              ) : item.title === "Home" || item.title === "All Invoices" ? (
+                isLoggedIn && (
+                  <li key={index} className="nav-item">
+                    <NavLink
+                      exact
+                      to={item.url}
+                      activeClassName="active"
+                      className="nav-links"
+                      onClick={handleClick}
+                    >
+                      {item.title}
+                    </NavLink>
+                  </li>
+                )
+              ) : item.title === "Home" || item.title === "All Invoices" ? (
+                !isLoggedIn && (
+                  <li key={index} className="nav-item">
+                    
+                  </li>
+                )
               ) : (
                 <li key={index} className="nav-item">
                   <NavLink
