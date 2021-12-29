@@ -7,6 +7,7 @@ const AppError = require("./utils/appError");
 const authRouter = require("./routes/authRouter");
 const invoiceRouter = require("./routes/invoiceRouter");
 const userRouter = require("./routes/userRouter");
+const feedbackRouter=require('./routes/feedbackRouter');
 
 console.log(
   process.env.PORT,
@@ -25,6 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/user", userRouter);
 app.use("/user", authRouter);
 app.use("/invoices", invoiceRouter);
+app.use('/feedbacks',feedbackRouter);
 
 app.all("*", (req, res, next) => {
   next(new AppError(`Can't reach '${req.originalUrl}' on this server!!`, 404));
