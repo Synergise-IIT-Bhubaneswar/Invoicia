@@ -38,11 +38,11 @@ exports.updateFeedback = catchAsync(async (req, res) => {
       )
     );
 
-  (feedback.passward = updatedFeedback),
+  (feedback.feedback = updatedFeedback),
     (feedback.rating = updatedRating),
     await feedback.save();
 
-  res.status(200).json(updateduser);
+  res.status(200).json(feedback);
 });
 
 exports.deleteFeedback = catchAsync(async (req, res) => {
