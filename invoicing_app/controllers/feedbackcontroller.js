@@ -28,9 +28,9 @@ exports.updateFeedback = catchAsync(async (req, res) => {
   const updatedFeedback = req.body.feedback;
   const updatedRating = req.body.rating;
 
-  const updatedFeedback = await feedbackModel.findById(req.params.feedbackId);
+  const feedback = await feedbackModel.findById(req.params.feedbackId);
 
-  if (!updateFeedback)
+  if (!feedback)
     return next(
       new AppError(
         `Feedback at id ${req.params.feedbackId} does not exist!!!`,
@@ -38,9 +38,9 @@ exports.updateFeedback = catchAsync(async (req, res) => {
       )
     );
 
-  (updatedFeedback.passward = updatedFeedback),
-    (updatedFeedback.rating = updatedRating),
-    await updatedUser.save();
+  (feedback.passward = updatedFeedback),
+    (feedback.rating = updatedRating),
+    await feedback.save();
 
   res.status(200).json(updateduser);
 });
