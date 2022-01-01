@@ -17,6 +17,9 @@ const feedbackSchema = new Schema({
     required: [true, "Rating must be specified wih feedback"],
     max: 5,
   },
+  {
+    timestamps: true
+}
 });
 
 module.exports = mongoose.model("feedback", feedbackSchema);
